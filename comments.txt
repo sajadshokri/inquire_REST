@@ -2,7 +2,7 @@
 ''' post[ pid ].comments action    (paging by id) '''
 	// GET		/comments ? pid  &  id:0
 	//			> {
-	//              (like):[ (med,) ],
+	//              (like):[ (id,) ],
 	//              data:[{ id, u, b }    LIMIT 32 ] }
 
 	// paging condition:
