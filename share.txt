@@ -1,0 +1,10 @@
+## share ###############
+''' share and unshare this post.id '''
+	// POST		/share
+	//			< id
+	//          << user_id
+	//			> CODE:ok:err
+	
+	// DELETE	/share ? id
+	//          << user_id
+	//			> CODE:ok:err

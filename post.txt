@@ -1,0 +1,15 @@
+## post ################
+''' user.post action '''
+	// POST		/post
+	//          < body, x:0, xl:0 ,y:0, yl:0
+	//			<< user_id
+	//			> CODE:ok:err
+
+	// DELETE	/post ? id
+	//			<< user_id
+	//			> CODE:ok:err
+	
+	// PUT		/post
+	//          < body, id
+	//			<< user_id
+	//			> CODE:ok:err

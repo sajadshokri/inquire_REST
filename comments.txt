@@ -1,0 +1,19 @@
+## comments ############
+''' post[ pid ].comments action    (paging by id) '''
+	// GET		/comments ? pid  &  id:0
+	//			> {
+	//              (like):[ (med,) ],
+	//              data:[{ id, u, b }    LIMIT 32 ] }
+
+	// paging condition:
+	//    id: !nil  =>  paging
+	//    id: nil   =>  get last comment + like_list
+
+	// POST		/comments
+	//          < pid, body
+	//          << user_id
+	//			> CODE:ok:err
+
+	// DELETE	/comments ? pid  &  id
+	//          << user_id
+	//			> CODE:ok:err

@@ -1,0 +1,13 @@
+## area ################
+''' get post from area by [zoom, GPS]    (paging by id)'''
+	// GET		/area ? view_type  &  x  &  lx  &  y  &  ly  &  zoom  &  id:0  & type_flag:0  &  non_flag:False
+	//          << (user_id)
+	//			> {
+	//			    flag:[{ id, name, type, des, flwr:int, pos:"x.lx:y.ly" }],
+	//              post:[{ id, user, (body,) (src,) (med,) 
+	//                      (flag,) (flag_name,) (xy_name,)
+	//                      (shared,) (liked,) (like,) (comment) }    LIMIT 32 ] }
+
+	// paging condition:
+	//    id: !nil  =>  paging
+	//    id: nil   =>  get last area_post + flag_list

@@ -1,0 +1,16 @@
+## page ################
+''' get personal user posts  and  info_count    (paging by id) '''
+	// GET      /page ?  user  &  view_type  &  id:0
+	//          << (user_id)
+	//          > { post_num, flag_num,
+	//              like_num, share_num,
+	//              flwr_num, flwg_num,
+	//              flwg:bool, sil:bool,
+	//              info:{name, mail, gender, birth, homePage, city, country},
+	//              post:[{ id, user, (body,) (src,) (med,) 
+	//                    (flag,) (flag_name,) (xy_name,)
+	//                    (shared,) (liked,) (like,) (comment) }    LIMIT 32 ] }
+
+	// paging condition:
+	//    id: !null  =>  paging
+	//    id: null   =>  get last post + info

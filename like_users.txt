@@ -1,0 +1,8 @@
+## like_users ##########
+''' who like this post.id    (paging by id) '''
+	// GET		/like_users ? post  &  id:''
+	//			> [ {u, t}    LIMIT 32 ]
+
+	// paging condition:
+	//    id: !null  =>  paging by usr_id
+	//    id: null   =>  get last liked_users

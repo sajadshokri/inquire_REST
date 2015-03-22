@@ -1,0 +1,12 @@
+## home ################
+''' get post from flwg_usr && flwg_flag     (paging by id) '''
+	// GET		/home ? view_type  &  id:0
+	//          << user_id
+	//			> { alert:int,
+	//              post:[{ id, user, (body,) (src,) (med,) 
+	//                    (flag,) (flag_name,) (xy_name,)
+	//                    (shared,) (liked,) (like,) (comment) }    LIMIT 32 ] }
+	
+	// paging condition:
+	//    id: !null  =>  paging
+	//    id: null   =>  get last home_post + alert_numb

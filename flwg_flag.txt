@@ -1,0 +1,13 @@
+## flwg_flag ###########
+''' list user.flag    (paging by id) '''
+	// GET		/flwg_flag ? user  &  id:''
+	//			> [{id, name, (sil), tim}    LIMIT 32 ]
+
+	// POST		/flwg_flag
+	//          < id, silent_mark
+	//          << user_id
+	//			> CODE:ok:err
+
+	// DELETE	/flwg_flag ? id
+	//          << user_id
+	//			> CODE:ok:err

@@ -1,0 +1,5 @@
+## forget_pass #########
+''' send rest_pass_URL for user by [user_id  ||  mail] '''
+	// POST		/forget_pass
+	//			< (id), (mail)
+	//          > CODE:ok:err

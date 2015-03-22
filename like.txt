@@ -1,0 +1,10 @@
+## like ################
+''' like this post.id '''
+	// POST		/like
+	//			< id
+	//          << user_id
+	//			> CODE:ok:err
+	
+	// DELETE	/like ? id
+	//          << user_id
+	//			> CODE:ok:err

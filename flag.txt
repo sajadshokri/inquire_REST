@@ -1,0 +1,19 @@
+## flag ################
+''' get post from flag    (paging by id) '''
+	// GET      /flag ? flag_id  &  view_type  &  id:0
+	//          << (user_id)
+	//          > {
+	//              (flwg):bool,
+	//              (sil) :bool,
+	//              post:[{ id, user, (body,) (src,) (med,) 
+	//                    (xy_name,)
+	//                    (shared,) (liked,) (like,) (comment) }    LIMIT 32 ] }
+
+	// paging condition:
+	//    id: !null  =>  paging
+	//    id: null   =>  get last flag_post + flwg_mark + sil_mark
+
+	// POST		/flag
+	//          < flag_id, name, body, x:0, xl:0 ,y:0, yl:0
+	//          << user_id
+	//          > CODE:ok:err
