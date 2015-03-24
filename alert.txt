@@ -1,0 +1,13 @@
+## alert ###############
+''' user.alert by type: [flwr, like, share]    (paging by id)'''
+    // GET      /alert ? id:0
+    //          << user_id
+    //          > {
+    //              (num),
+    //              data: [{src, data, type:(flwr, like, share)}    LIMIT 64 ]}
+
+    // paging condition:
+    //    id: !nil  =>  paging
+    //    id: nil   =>  get last alert
+
+

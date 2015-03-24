@@ -1,0 +1,15 @@
+## flwg ################ //TODO show status
+''' user.following    (paging by id) '''
+    // GET      /flwg ? user  &  id:''
+    //          > [{id, (sil), tim}    LIMIT 32 ]
+
+    // POST     /flwg
+    //          < id, silent_mark
+    //          << user_id
+    //          > CODE:ok:err
+
+    // DELETE   /flwg ? id
+    //          << user_id
+    //          > CODE:ok:err
+
+

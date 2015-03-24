@@ -1,0 +1,10 @@
+## info ################
+''' get user info'''
+    // GET      /info
+    //          << user_id
+    //          > { post_num, flag_num,
+    //              like_num, share_num,
+    //              flwr_num, flwg_num,
+    //              info:{name, mail, gender, birth, homePage, city, country} }
+
+

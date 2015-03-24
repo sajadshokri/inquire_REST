@@ -1,0 +1,10 @@
+## share_users #########
+''' who share this post.id     (paging by id) '''
+    // GET      /share_users ? post  &  id:''
+    //          > [ {u, t}    LIMIT 32 ]
+    
+    // paging condition:
+    //    id: !null  =>  paging by usr_id
+    //    id: null   =>  get last shared_users
+
+

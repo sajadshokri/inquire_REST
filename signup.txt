@@ -1,0 +1,7 @@
+## signup ##############
+''' '''
+    // POST     /signup
+    //          < user, mail, pass, lang, gen
+    //          > CODE:ok:err
+
+

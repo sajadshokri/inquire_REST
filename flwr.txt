@@ -1,0 +1,6 @@
+## flwr ################
+''' user.follower    (paging by id) '''
+    // GET      /flwr ? user  &  id:''
+    //          > [{id, tim}    LIMIT 32 ]
+
+

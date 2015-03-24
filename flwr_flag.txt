@@ -1,0 +1,7 @@
+## flwr_flag ###########
+''' flag.members    (paging by id) '''
+    // GET      /flwr_flag ? flag  &  id:''
+    //          > [{id, tim}    LIMIT 32 ]
+    
+    
+    

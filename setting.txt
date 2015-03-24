@@ -1,0 +1,15 @@
+## setting #############
+''' setting data for user '''
+    // GET      /setting
+    //          << user_id
+    //          > {
+    //              pub_info: {name, mail, position_send, gender, birth, homePage, city, country}
+    //              prv_info: {name, mail, position_send, gender, birth, homePage, city, country}
+    //          }
+
+    // POST     /setting
+    //          << user_id
+    //          < field, value, type
+    //          > CODE:ok:err
+
+

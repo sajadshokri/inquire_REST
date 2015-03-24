@@ -1,0 +1,8 @@
+## new_pass ############
+''' set new pass '''
+    // POST     /new_pass
+    //          < new_pass, old_pass
+    //          << user_id
+    //          > CODE:ok:err
+
+

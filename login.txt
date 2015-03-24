@@ -1,0 +1,7 @@
+## login ###############
+''' '''
+    // POST     /login
+    //          < user, pass
+    //          > CODE:ok:err
+
+

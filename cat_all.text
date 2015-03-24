@@ -1,0 +1,273 @@
+## alert ###############
+''' user.alert by type: [flwr, like, share]    (paging by id)'''
+    // GET      /alert ? id:0
+    //          << user_id
+    //          > {
+    //              (num),
+    //              data: [{src, data, type:(flwr, like, share)}    LIMIT 64 ]}
+
+    // paging condition:
+    //    id: !nil  =>  paging
+    //    id: nil   =>  get last alert
+
+
+## area ################
+''' get post from area by [zoom, GPS]    (paging by id)'''
+    // GET      /area ? view_type  &  x  &  lx  &  y  &  ly  &  zoom  &  id:0  & type_flag:0  &  non_flag:False
+    //          << (user_id)
+    //          > {
+    //              (title):"position_name",
+    //              flag:[{ id, name, type, des, flwr:int, pos:"x.lx:y.ly" }],
+    //              post:[{ id, user, (body,) (src,) (med,) 
+    //                      (flag,) (flag_name,) (xy_name,)
+    //                      (shared,) (liked,) (like,) (comment) }    LIMIT 32 ] }
+
+    // paging condition:
+    //    id: !nil  =>  paging
+    //    id: nil   =>  get last area_post + flag_list
+
+
+## comments ############
+''' post[ pid ].comments action    (paging by id) '''
+    // GET      /comments ? pid  &  id:0
+    //          > {
+    //              (like):[ (id,) ],
+    //              data:[{ id, u, b }    LIMIT 32 ] }
+
+    // paging condition:
+    //    id: !nil  =>  paging
+    //    id: nil   =>  get last comment + like_list
+
+    // POST     /comments
+    //          < pid, body
+    //          << user_id
+    //          > CODE:ok:err
+
+    // DELETE   /comments ? pid  &  id
+    //          << user_id
+    //          > CODE:ok:err
+
+
+## flag_page ################
+''' create new flag page '''
+    // POST     /flag_page
+    //          < name, type, des:'', x, lx, y, ly
+    //          << user_id
+    //          > CODE:ok:err
+    
+    // PUT      /flag_page
+    //          < id, type, des
+    //          << user_id
+    //          > CODE:ok:err
+
+
+## flag ################
+''' get post from flag    (paging by id) '''
+    // GET      /flag ? flag_id  &  view_type  &  id:0
+    //          << (user_id)
+    //          > {
+    //              (flwg):bool,
+    //              (sil) :bool,
+    //              post:[{ id, user, (body,) (src,) (med,) 
+    //                    (xy_name,)
+    //                    (shared,) (liked,) (like,) (comment) }    LIMIT 32 ] }
+
+    // paging condition:
+    //    id: !null  =>  paging
+    //    id: null   =>  get last flag_post + flwg_mark + sil_mark
+
+    // POST     /flag
+    //          < flag_id, name, body, x:0, xl:0 ,y:0, yl:0
+    //          << user_id
+    //          > CODE:ok:err
+
+
+## flwg_flag ###########
+''' list user.flag    (paging by id) '''
+    // GET      /flwg_flag ? user  &  id:''
+    //          > [{id, name, (sil), tim}    LIMIT 32 ]
+
+    // POST     /flwg_flag
+    //          < id, silent_mark
+    //          << user_id
+    //          > CODE:ok:err
+
+    // DELETE   /flwg_flag ? id
+    //          << user_id
+    //          > CODE:ok:err
+
+
+## flwg ################ //TODO show status
+''' user.following    (paging by id) '''
+    // GET      /flwg ? user  &  id:''
+    //          > [{id, (sil), tim}    LIMIT 32 ]
+
+    // POST     /flwg
+    //          < id, silent_mark
+    //          << user_id
+    //          > CODE:ok:err
+
+    // DELETE   /flwg ? id
+    //          << user_id
+    //          > CODE:ok:err
+
+
+## flwr_flag ###########
+''' flag.members    (paging by id) '''
+    // GET      /flwr_flag ? flag  &  id:''
+    //          > [{id, tim}    LIMIT 32 ]
+    
+    
+    ## flwr ################
+''' user.follower    (paging by id) '''
+    // GET      /flwr ? user  &  id:''
+    //          > [{id, tim}    LIMIT 32 ]
+
+
+## forget_pass #########
+''' send rest_pass_URL for user by [user_id  ||  mail] '''
+    // POST     /forget_pass
+    //          < (id), (mail)
+    //          > CODE:ok:err
+
+
+## home ################
+''' get post from flwg_usr && flwg_flag     (paging by id) '''
+    // GET      /home ? view_type  &  id:0
+    //          << user_id
+    //          > { alert:int,
+    //              post:[{ id, user, (body,) (src,) (med,) 
+    //                    (flag,) (flag_name,) (xy_name,)
+    //                    (shared,) (liked,) (like,) (comment) }    LIMIT 32 ] }
+
+    // paging condition:
+    //    id: !null  =>  paging
+    //    id: null   =>  get last home_post + alert_numb
+
+
+## info ################
+''' get user info'''
+    // GET      /info
+    //          << user_id
+    //          > { post_num, flag_num,
+    //              like_num, share_num,
+    //              flwr_num, flwg_num,
+    //              info:{name, mail, gender, birth, homePage, city, country} }
+
+
+## like ################
+''' like this post.id '''
+    // POST     /like
+    //          < id
+    //          << user_id
+    //          > CODE:ok:err
+    
+    // DELETE   /like ? id
+    //          << user_id
+    //          > CODE:ok:err
+
+
+## like_users ##########
+''' who like this post.id    (paging by id) '''
+    // GET      /like_users ? post  &  id:''
+    //          > [ {u, t}    LIMIT 32 ]
+
+    // paging condition:
+    //    id: !null  =>  paging by usr_id
+    //    id: null   =>  get last liked_users
+
+
+## login ###############
+''' '''
+    // POST     /login
+    //          < user, pass
+    //          > CODE:ok:err
+
+
+## new_pass ############
+''' set new pass '''
+    // POST     /new_pass
+    //          < new_pass, old_pass
+    //          << user_id
+    //          > CODE:ok:err
+
+
+## page ################
+''' get personal user posts  and  info_count    (paging by id) '''
+    // GET      /page ?  user  &  view_type  &  id:0
+    //          << (user_id)
+    //          > { post_num, flag_num,
+    //              like_num, share_num,
+    //              flwr_num, flwg_num,
+    //              flwg:bool, sil:bool,
+    //              info:{name, mail, gender, birth, homePage, city, country},
+    //              post:[{ id, user, (body,) (src,) (med,) 
+    //                    (flag,) (flag_name,) (xy_name,)
+    //                    (shared,) (liked,) (like,) (comment) }    LIMIT 32 ] }
+
+    // paging condition:
+    //    id: !null  =>  paging
+    //    id: null   =>  get last post + info
+
+
+## post ################
+''' user.post action '''
+    // POST     /post
+    //          < body, x:0, xl:0 ,y:0, yl:0
+    //          << user_id
+    //          > CODE:ok:err
+
+    // DELETE   /post ? id
+    //          << user_id
+    //          > CODE:ok:err
+
+    // PUT      /post
+    //          < body, id
+    //          << user_id
+    //          > CODE:ok:err
+
+
+## setting #############
+''' setting data for user '''
+    // GET      /setting
+    //          << user_id
+    //          > {
+    //              pub_info: {name, mail, position_send, gender, birth, homePage, city, country}
+    //              prv_info: {name, mail, position_send, gender, birth, homePage, city, country}
+    //          }
+
+    // POST     /setting
+    //          << user_id
+    //          < field, value, type
+    //          > CODE:ok:err
+
+
+## share ###############
+''' share and unshare this post.id '''
+    // POST     /share
+    //          < id
+    //          << user_id
+    //          > CODE:ok:err
+
+    // DELETE   /share ? id
+    //          << user_id
+    //          > CODE:ok:err
+
+
+## share_users #########
+''' who share this post.id     (paging by id) '''
+    // GET      /share_users ? post  &  id:''
+    //          > [ {u, t}    LIMIT 32 ]
+    
+    // paging condition:
+    //    id: !null  =>  paging by usr_id
+    //    id: null   =>  get last shared_users
+
+
+## signup ##############
+''' '''
+    // POST     /signup
+    //          < user, mail, pass, lang, gen
+    //          > CODE:ok:err
+
+
