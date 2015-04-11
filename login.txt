@@ -1,7 +1,8 @@
 ## login ###############
-''' '''
+''' if login is ok  =>  get cookie by name '_' '''
     // POST     /login
     //          < user, pass
     //          > CODE:ok:err
+    //          >> (_)
 
 

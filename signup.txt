@@ -1,7 +1,8 @@
 ## signup ##############
-''' '''
+''' if signup is ok  =>  get cookie by name '_'  =>  user are login '''
     // POST     /signup
     //          < user, mail, pass, lang, gen
     //          > CODE:ok:err
+    //          >> (_)
 
 
