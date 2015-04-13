@@ -3,7 +3,7 @@
     // GET      /page ?  user  &  view_type  &  id:0
     //          << (user_id)
     //          > { post_num, flag_num,
-    //              like_num, share_num,
+    //              like_num,
     //              flwr_num, flwg_num,
     //              flwg:bool, sil:bool,
     //              info:{name, mail, gender, birth, homePage, city, country},
