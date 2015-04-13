@@ -201,7 +201,7 @@
     //              like_num,
     //              flwr_num, flwg_num,
     //              flwg:bool, sil:bool,
-    //              info:{name, mail, gender, birth, homePage, city, country},
+    //              name, mail, gender, birth, homePage, city, country,
     //              post:[{ id, user, (body,) (src,) (med,) 
     //                    (flag,) (flag_name,) (xy_name,)
     //                    (shared,) (liked,) (like,) (comment) }    LIMIT 32 ] }
