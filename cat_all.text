@@ -66,10 +66,12 @@
     // GET      /flag ? flag_id  &  view_type  &  id:0
     //          << (user_id)
     //          > {
-    //              (info):{ id, name, type, des, flwr:int, pos:"x.lx:y.ly", flwg:bool, sil:bool },
-    //              post:[{ id, user, (body,) (src,) (med,) 
+    //              id, name, type, des, loc:"x.lx:y.ly",
+    //              flwr_num:int, post_num:int,
+    //              flwg:bool, sil:bool, editor:bool,
+    //              post:[{ id, user, (body,) (src,) (med,)
     //                    (xy_name,)
-    //                    (shared,) (liked,) (like,) (comment) }    LIMIT 32 ] }
+    //                    (liked,) (like,) (comment) }    LIMIT 32 ] }
 
     // paging condition:
     //    id: !null  =>  paging
