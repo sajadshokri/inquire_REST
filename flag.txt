@@ -7,7 +7,7 @@
     //              flwr_num:int, post_num:int,
     //              flwg:bool, sil:bool, editor:bool,
     //              post:[{ id, user, (body,) (src,) (med,)
-    //                    (xy_name,)
+    //                    (loc,)
     //                    (shared,) (liked,) (like,) (comment) }    LIMIT 32 ] }
 
     // paging condition:

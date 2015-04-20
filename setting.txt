@@ -3,13 +3,15 @@
     // GET      /setting
     //          << user_id
     //          > {
-    //              pub_info: {name, mail, position_send, gender, birth, homePage, city, country}
-    //              prv_info: {name, mail, position_send, gender, birth, homePage, city, country}
+    //              name, gender, birth,
+    //              homePage, city, country,
+    //              mail_public, mail_private, 
+    //              position_send
     //          }
 
-    // POST     /setting
+    // PUT      /setting
     //          << user_id
-    //          < field, value, type
+    //          < field, value
     //          > CODE:ok:err
 
 
