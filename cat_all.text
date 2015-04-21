@@ -48,7 +48,7 @@
     //          > CODE:ok:err
 
 
-## flag_page ################
+## flag_page ###########
 ''' create new flag page '''
     // POST     /flag_page
     //          < name, type, des:'', x, lx, y, ly
@@ -89,7 +89,7 @@
     //          > [{id, name, (sil,) (adm,) tim}    LIMIT 32 ]
 
     // POST     /flwg_flag
-    //          < id, silent_mark
+    //          < id, (silent_mark)
     //          << user_id
     //          > CODE:ok:err
 
@@ -239,7 +239,7 @@
     //          > CODE:ok:err
 
 
-## report ###############
+## report ##############
 ''' '''
     // POST     /report
     //          < post_id, type (,des)
