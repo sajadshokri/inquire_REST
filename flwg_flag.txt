@@ -1,7 +1,7 @@
 ## flwg_flag ###########
 ''' list user.flag    (paging by id) '''
     // GET      /flwg_flag ? user  &  id:''
-    //          > [{id, name, (sil), tim}    LIMIT 32 ]
+    //          > [{id, name, (sil,) (adm,) tim}    LIMIT 32 ]
 
 ''' field:  [ silent_mark, editor ] '''
 ''' value:  [ true, false ] '''

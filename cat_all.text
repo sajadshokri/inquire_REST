@@ -86,7 +86,7 @@
 ## flwg_flag ###########
 ''' list user.flag    (paging by id) '''
     // GET      /flwg_flag ? user  &  id:''
-    //          > [{id, name, (sil), tim}    LIMIT 32 ]
+    //          > [{id, name, (sil,) (adm,) tim}    LIMIT 32 ]
 
 ''' field:  [ silent_mark, editor ] '''
 ''' value:  [ true, false ] '''
@@ -152,9 +152,11 @@
 ''' get user info'''
     // GET      /info
     //          << user_id
-    //          > { post_num, flag_num,
+    //          > { name,
+    //              post_num, flag_num,
     //              like_num,
     //              flwr_num, flwg_num }
+    
 
 
 ## like ################
@@ -206,7 +208,7 @@
     //              name, gender, birth,
     //              homePage, city, country,
     //              mail_public,
-    //              post:[{ id, user, (body,) (src,) (med,) 
+    //              post:[{ id, (body,) (src,) (med,) 
     //                    (flag,) (flag_name,) (loc,)
     //                    (shared,) (liked,) (like,) (comment) }    LIMIT 32 ] }
 
