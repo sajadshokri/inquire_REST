@@ -20,7 +20,3 @@
     //          > CODE:ok:err
 
 
-// GET      /flwg_flag ? user  &  id:''
-//          > [{id, name, (sil,) (adm,) tim}    LIMIT 32 ]
-
-

@@ -105,10 +105,6 @@
     //          > CODE:ok:err
 
 
-// GET      /flwg_flag ? user  &  id:''
-//          > [{id, name, (sil,) (adm,) tim}    LIMIT 32 ]
-
-
 ## flwg ################ //TODO show status
 ''' user.following    (paging by id) '''
     // GET      /flwg ? user  &  id:''
