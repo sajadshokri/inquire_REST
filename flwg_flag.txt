@@ -3,6 +3,11 @@
     // GET      /flwg_flag ? user  &  id:''
     //          > [{id, name, (sil,) (adm,) tim}    LIMIT 32 ]
 
+    // POST     /flwg_flag
+    //          < id, silent_mark
+    //          << user_id
+    //          > CODE:ok:err
+
 ''' field:  [ silent_mark, editor ] '''
 ''' value:  [ true, false ] '''
     // PUT      /flwg_flag
@@ -13,5 +18,9 @@
     // DELETE   /flwg_flag ? id
     //          << user_id
     //          > CODE:ok:err
+
+
+// GET      /flwg_flag ? user  &  id:''
+//          > [{id, name, (sil,) (adm,) tim}    LIMIT 32 ]
 
 
