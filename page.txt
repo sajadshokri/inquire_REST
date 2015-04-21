@@ -9,7 +9,7 @@
     //              name, gender, birth,
     //              homePage, city, country,
     //              mail_public,
-    //              post:[{ id, user, (body,) (src,) (med,) 
+    //              post:[{ id, (body,) (src,) (med,) 
     //                    (flag,) (flag_name,) (loc,)
     //                    (shared,) (liked,) (like,) (comment) }    LIMIT 32 ] }
 
