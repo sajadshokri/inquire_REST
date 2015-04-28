@@ -8,6 +8,11 @@
     //          << user_id
     //          > CODE:ok:err
 
+    // PUT      /flwg
+    //          < id, silent_mark
+    //          << user_id
+    //          > CODE:ok:err
+
     // DELETE   /flwg ? id
     //          << user_id
     //          > CODE:ok:err
