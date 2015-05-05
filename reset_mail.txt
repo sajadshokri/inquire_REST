@@ -1,0 +1,8 @@
+## reset_mail ##########
+''' reset private mail '''
+    // PUT		/reset_mail
+    //			< mail
+    //          << user_id
+    //          > CODE:ok:err
+
+

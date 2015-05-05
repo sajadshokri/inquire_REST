@@ -15,7 +15,7 @@
     //    id: null   =>  get last flag_post + flwg_mark + sil_mark
 
     // POST     /flag
-    //          < flag_id, name, body, x:0, xl:0 ,y:0, yl:0
+    //          < flag_id, name, body, x:0, lx:0 ,y:0, ly:0
     //          << user_id
     //          > CODE:ok:err
 

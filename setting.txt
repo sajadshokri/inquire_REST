@@ -6,7 +6,7 @@
     //              name, gender, birth,
     //              homePage, city, country,
     //              mail_public, mail_private, 
-    //              position_send
+    //              position_send, view_index
     //          }
 
     // PUT      /setting

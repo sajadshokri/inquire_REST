@@ -78,7 +78,7 @@
     //    id: null   =>  get last flag_post + flwg_mark + sil_mark
 
     // POST     /flag
-    //          < flag_id, name, body, x:0, xl:0 ,y:0, yl:0
+    //          < flag_id, name, body, x:0, lx:0 ,y:0, ly:0
     //          << user_id
     //          > CODE:ok:err
 
@@ -217,7 +217,7 @@
     //              flwg:bool, sil:bool,
     //              name, gender, birth,
     //              homePage, city, country,
-    //              mail_public,
+    //              mail_public, date_join,
     //              post:[{ id, (body,) (src,) (med,) 
     //                    (flag,) (flag_name,) (loc,)
     //                    (shared,) (liked,) (like,) (comment) }    LIMIT 32 ] }
@@ -230,7 +230,7 @@
 ## post ################
 ''' user.post action '''
     // POST     /post
-    //          < body, x:0, xl:0 ,y:0, yl:0
+    //          < body, x:0, lx:0 ,y:0, ly:0
     //          << user_id
     //          > CODE:ok:err
 
@@ -244,11 +244,18 @@
     //          > CODE:ok:err
 
 
-# inquire_REST
 ## report ##############
 ''' '''
     // POST     /report
     //          < post_id, type (,des)
+    //          << user_id
+    //          > CODE:ok:err
+
+
+## reset_mail ##########
+''' reset private mail '''
+    // PUT		/reset_mail
+    //			< mail
     //          << user_id
     //          > CODE:ok:err
 
@@ -261,7 +268,7 @@
     //              name, gender, birth,
     //              homePage, city, country,
     //              mail_public, mail_private, 
-    //              position_send
+    //              position_send, view_index
     //          }
 
     // PUT      /setting
