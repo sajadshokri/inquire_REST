@@ -1,0 +1,9 @@
+## image_background ############
+''' Set new image_background '''
+''' The image_id save in user_metadata.background '''
+    // POST		/image_background
+    //			< med
+    //          << user_id
+    //          > CODE:ok:err
+
+
