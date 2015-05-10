@@ -236,6 +236,7 @@
     //              name, gender, birth,
     //              homePage, city, country,
     //              mail_public, date_join,
+    //              image, background,
     //              post:[{ id, (body,) (src,) (med,) 
     //                    (flag,) (flag_name,) (loc,)
     //                    (shared,) (liked,) (like,) (comment) }    LIMIT 32 ] }
