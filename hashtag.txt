@@ -1,0 +1,14 @@
+## hashtag ################
+''' hashtag by area '''
+    // GET      /hashtag ?  val  &  view_type  &  x  &  lx  &  y  &  ly  &  zoom  &  id:0
+    //          << (user_id)
+    //          > {
+    //              post:[{ id, user, (body,) (src,) (med,) 
+    //                      (flag,) (flag_name,) (loc,)
+    //                      (shared,) (liked,) (like,) (comment) }    LIMIT 32 ] }
+
+    // paging condition:
+    //    id: !nil  =>  paging
+    //    id: nil   =>  get last hashtag
+
+
