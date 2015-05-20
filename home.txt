@@ -4,7 +4,7 @@
     //          << user_id
     //          > { alert:int,
     //              post:[{ id, user, (body,) (src,) (med,) 
-    //                    (flag,) (flag_name,) (loc,)
+    //                    (flag_post,) (flag,) (flag_name,) (loc,)
     //                    (shared,) (liked,) (like,) (comment) }    LIMIT 32 ] }
 
     // paging condition:
