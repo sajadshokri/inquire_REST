@@ -1,6 +1,6 @@
 ## match_user ################
 ''' match user pattern '''
-    // GET      /match_user ? user:''
+    // GET      /match_user ? user:''  &  x:''  &  lx:''  &  y:''  &  ly:''
     //          << user_id
     //          > [ {u}    LIMIT 32 ]
 
