@@ -233,7 +233,7 @@
 
 ## match_user ################
 ''' match user pattern '''
-    // GET      /match_user ? user:''
+    // GET      /match_user ? user:''  &  x:''  &  lx:''  &  y:''  &  ly:''
     //          << user_id
     //          > [ {u}    LIMIT 32 ]
 
@@ -258,7 +258,6 @@
     //              name, gender, birth,
     //              homePage, city, country,
     //              mail_public, date_join,
-    //              image, background,
     //              post:[{ id, (body,) (src,) (med,) 
     //                    (flag,) (flag_name,) (loc,)
     //                    (shared,) (liked,) (like,) (comment) }    LIMIT 32 ] }
@@ -266,6 +265,18 @@
     // paging condition:
     //    id: !null  =>  paging
     //    id: null   =>  get last post + info
+    
+    // image URL:
+    //   Profile:
+    //     inqu.ir/e/USER_ID
+    //     inqu.ir/e/h:USER_ID
+    //
+    //   Background:
+    //     inqu.ir/e/b:USER_ID
+    //
+    //   Media post:
+    //     inqu.ir/e/Media_ID
+    //     inqu.ir/e/h:Media_ID
 
 
 ## post ################
