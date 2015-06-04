@@ -312,6 +312,14 @@
     //          > CODE:ok:err
 
 
+## search ##############
+''' search post body. no paging, get all by limit 64 '''
+    // GET      /search ? view_type  &  val  &  page
+    //          > {
+    //              data:[{ id, user, body, (src,) (med,) 
+    //                      (flag,) (flag_name,) (loc,) }    LIMIT 64 ] }
+
+
 ## setting #############
 ''' setting data for user '''
     // GET      /setting
