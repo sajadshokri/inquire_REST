@@ -1,0 +1,11 @@
+## 	post_selector  #####
+''' body, like and first page of comments, another page get by comments_API '''
+    // GET      /post_selector ? pid
+    //          > {
+    //              (body,) (src,) (med,)
+    //              (flag,) (flag_name,) (loc,)
+    //              (shared,) (liked,) (like,) (comment,)
+    //              like_usr:[ (id,) ],
+    //              comments:[{ id, u, b }    LIMIT 32 ] }
+
+

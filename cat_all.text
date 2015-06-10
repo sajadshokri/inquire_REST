@@ -31,8 +31,8 @@
 ''' post[ pid ].comments action    (paging by id) '''
     // GET      /comments ? pid  &  id:0
     //          > {
-    //              (like):[ (id,) ],
-    //              data:[{ id, u, b }    LIMIT 32 ] }
+    //              (like_usr):[ (id,) ],
+    //              comments:[{ id, u, b }    LIMIT 32 ] }
 
     // paging condition:
     //    id: !nil  =>  paging
@@ -277,6 +277,17 @@
     //   Media post:
     //     inqu.ir/e/Media_ID
     //     inqu.ir/e/h:Media_ID
+
+
+## 	post_selector  #####
+''' body, like and first page of comments, another page get by comments_API '''
+    // GET      /post_selector ? pid
+    //          > {
+    //              (body,) (src,) (med,)
+    //              (flag,) (flag_name,) (loc,)
+    //              (shared,) (liked,) (like,) (comment,)
+    //              like_usr:[ (id,) ],
+    //              comments:[{ id, u, b }    LIMIT 32 ] }
 
 
 ## post ################
